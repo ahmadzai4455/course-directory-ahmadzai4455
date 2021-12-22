@@ -1,10 +1,10 @@
 import java.util.NoSuchElementException;
 
-public class MyStackofInts {
-  private int[] items;
+public class MyStack {
+  private Object[] items;
 
-  MyStackofInts(){
-      items = new int[0];
+  MyStack(){
+      items = new Object[0];
 
   }
 
@@ -14,8 +14,8 @@ public class MyStackofInts {
   boolean isEmpty() {
   return size() == 0;
   }
-  void push(int item){
-      int[] temp = new int[items.length + 1];
+  void push(Object item){
+      Object[] temp = new Object[items.length + 1];
       for (int i= 0; i < items.length; i++){
           temp[i] = items[i];
 
@@ -23,20 +23,20 @@ public class MyStackofInts {
       temp[items.length - 1] = item;
       items = temp;
   }
-  int pop() {
+  Object pop() {
       if (items.length == 0)
           throw new NoSuchElementException();
   }
-          int[] temp = new int[items.length -1];
+          Object[] temp = new Object[][items.length -1];
   for (int i = 0; i < temp.length; i++){
       temp[i] = items[i];
   }
-  int result = items[items.length = 1];
+  Object result = items[items.length = 1];
   items = temp;
   return result;
 
 }
-int peek(){
+Object peek(){
     if (isEmpty()) {
         throw new NoSuchElementException();
     }
