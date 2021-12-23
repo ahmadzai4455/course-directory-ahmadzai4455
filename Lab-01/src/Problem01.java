@@ -6,7 +6,7 @@ public class Problem01 {
         Scanner scanner = new Scanner(System.in);
         String item;
         while (scanner.hasNextLine()) {
-            items.push(scanner.nextLine());
+            items.push(scanner.nextLine())
         }
 
         System.out.println(items.peek());
